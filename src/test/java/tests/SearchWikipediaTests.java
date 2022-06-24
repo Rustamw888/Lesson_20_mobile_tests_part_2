@@ -15,7 +15,7 @@ import static io.qameta.allure.Allure.step;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Tag("android")
-public class HomeWorkTest extends TestBase {
+public class SearchWikipediaTests extends TestBase {
 
     @Test
     void firstSearchPositiveTest() {

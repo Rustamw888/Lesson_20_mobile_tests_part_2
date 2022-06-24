@@ -3,6 +3,8 @@ package tests;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import drivers.BrowserstackMobileDriver;
+import drivers.EmulatorMobileDriver;
+import drivers.MyDeviceMobileDriver;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
@@ -16,9 +18,17 @@ import static io.qameta.allure.Allure.step;;
 
 public class TestBase {
 
+    static String host = System.getProperty("host", "androidEmulator");
+
     @BeforeAll
     public static void setup() {
-        Configuration.browser = BrowserstackMobileDriver.class.getName();
+        if (host.equals("myDevice")) {
+            Configuration.browser = MyDeviceMobileDriver.class.getName();
+        } else if (host.equals("androidEmulator")) {
+            Configuration.browser = EmulatorMobileDriver.class.getName();
+        } else {
+            Configuration.browser = BrowserstackMobileDriver.class.getName();
+        }
         Configuration.browserSize = null;
     }
 
@@ -34,6 +44,8 @@ public class TestBase {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         step("Close driver", Selenide::closeWebDriver);
-        Attach.video(sessionId);
+        if (host.equals("browserstack")) {
+            Attach.video(sessionId);
+        }
     }
 }

@@ -1,6 +1,7 @@
 package helpers;
 
-import config.Remote;
+import config.IAndroidEmulator;
+import config.IBrowserStack;
 import org.aeonbits.owner.ConfigFactory;
 
 import static io.restassured.RestAssured.given;
@@ -11,7 +12,7 @@ public class BrowserStack {
     public static String videoUrl(String sessionId) {
         String url = format("https://api.browserstack.com/app-automate/sessions/%s.json", sessionId);
 
-        Remote config = ConfigFactory.create(Remote.class);
+        IBrowserStack config = ConfigFactory.create(IBrowserStack.class);
 
         return given()
                 .auth().basic(config.username(), config.key())

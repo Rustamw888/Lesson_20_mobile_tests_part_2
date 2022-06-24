@@ -1,0 +1,35 @@
+# Upload an app using the file manager to generate an "app_url" value. It uniquely identifies your uploaded app on BrowserStack.
+{"app_url":"bs://7f2268fa82af0cf34389d1db15f938ec926f6c46"}
+# In your test script, use this "app_url" value to specify the application under test using the "app" capability. During test execution, your app will automatically be installed and launched on the device being tested.
+{
+"app", "bs://7f2268fa82af0cf34389d1db15f938ec926f6c46"
+}
+
+
+{
+    "server": "hub-cloud.browserstack.com",
+    "username": "qamilord_pz1RmV",
+    "access_key": "13YfdN4JTxj6Znd3uxxF",
+    "capabilities": {
+      "project": "First Junit5 Android Project",
+      "build": "Junit5 Android First",
+      "name": "first_test",
+      "browserstack.debug": true,
+      "app": "bs://7f2268fa82af0cf34389d1db15f938ec926f6c46"
+    },
+    "environments": [{
+      "device": "Google Pixel 4",
+      "os_version":  "11.0"
+    }]
+}
+
+
+username=autotestscloud_qAejV5
+key=DkvhzD6ZSLTsxYERedAR
+app=bs://528f21c2bc4464c22805e226e72bdb2300359966
+device=Samsung Galaxy S22 Ultra
+os_version=12.0
+baseURL = http://hub.browserstack.com/wd/hub
+project = QA.GURU lesson 12/21
+build = browserstack-build-1
+testName = "selenide android test"
