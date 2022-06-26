@@ -84,18 +84,18 @@ screen
 <p align="center">
 <img title="TestOps tests page" src="images/screenshots/browserstack_device_logs.png">
 </p>
-# curl -u qamilord_pz1RmV:13YfdN4JTxj6Znd3uxxF https://api.browserstack.com/app-automate/builds/094671bce1f45532bd0227b1bc3530a36c7797a6/sessions/ad43656ff296ce33beb4390ccd2b29eb74c03976/devicelogs
+# curl -u login:password https://api.browserstack.com/app-automate/builds/094671bce1f45532bd0227b1bc3530a36c7797a6/sessions/ad43656ff296ce33beb4390ccd2b29eb74c03976/devicelogs
 
 - ### Вкладка с логами appium в BrowserStack
 <p align="center">
 <img title="TestOps tests page" src="images/screenshots/browserstack_appium_logs.png">
 </p>
+# curl -u login:password https://api.browserstack.com/app-automate/builds/094671bce1f45532bd0227b1bc3530a36c7797a6/sessions/ad43656ff296ce33beb4390ccd2b29eb74c03976/appiumlogs
 
 - ### Вкладка состояния устройства в BrowserStack
 <p align="center">
 <img title="TestOps tests page" src="images/screenshots/app_profiling.png">
 </p>
-# curl -u qamilord_pz1RmV:13YfdN4JTxj6Znd3uxxF https://api.browserstack.com/app-automate/builds/094671bce1f45532bd0227b1bc3530a36c7797a6/sessions/ad43656ff296ce33beb4390ccd2b29eb74c03976/appiumlogs
 
 ## :rocket: Видео примеры прохождения тестов
 > К каждому тесту в отчете прилагается видео. Одно из таких видео представлено ниже.
