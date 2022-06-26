@@ -10,6 +10,7 @@
 - [x] <a href="#rocket-сборка-в-Jenkins">Сборка в Jenkins</a>
 - [x] <a href="#rocket-запуск-из-терминала">Запуск из терминала</a>
 - [x] <a href="#rocket-allure-отчет">Allure отчет</a>
+- [x] <a href="#rocket-Результаты-тестов-в-BrowserStack">Результаты тестов в BrowserStack</a>
 - [x] <a href="#rocket-видео-примеры-прохождения-тестов">Видео примеры прохождения тестов</a>
 
 ## :rocket: Технологии и инструменты
