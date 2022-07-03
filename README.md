@@ -46,7 +46,7 @@
 ## :rocket: Запуск из терминала
 Локальный запуск:
 ```
-gradle clean screen -Dhost=(browserStack/myDevice/androidEmulator)
+gradle clean screen -Dhost=(browserStack/realDevice/androidEmulator)
 ```
 
 Удаленный запуск:

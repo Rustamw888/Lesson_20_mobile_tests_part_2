@@ -3,8 +3,8 @@ package config;
 import org.aeonbits.owner.Config;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
-@Config.Sources("classpath:config/myDevice.properties")
-public interface IMyDevice extends Config {
+@Config.Sources("classpath:config/realDevice.properties")
+public interface RealDevice extends Config {
 
     String baseURL();
 

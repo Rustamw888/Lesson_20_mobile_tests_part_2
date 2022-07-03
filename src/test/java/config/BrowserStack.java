@@ -4,7 +4,7 @@ import org.aeonbits.owner.Config;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources("classpath:config/browserStack.properties")
-public interface IBrowserStack extends Config {
+public interface BrowserStack extends Config {
 
     String username();
 

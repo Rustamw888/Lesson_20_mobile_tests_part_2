@@ -4,7 +4,7 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import drivers.BrowserstackMobileDriver;
 import drivers.EmulatorMobileDriver;
-import drivers.MyDeviceMobileDriver;
+import drivers.RealDeviceMobileDriver;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
@@ -23,7 +23,7 @@ public class TestBase {
     @BeforeAll
     public static void setup() {
         if (host.equals("myDevice")) {
-            Configuration.browser = MyDeviceMobileDriver.class.getName();
+            Configuration.browser = RealDeviceMobileDriver.class.getName();
         } else if (host.equals("androidEmulator")) {
             Configuration.browser = EmulatorMobileDriver.class.getName();
         } else {

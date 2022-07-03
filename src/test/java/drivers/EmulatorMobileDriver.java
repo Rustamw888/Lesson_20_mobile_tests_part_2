@@ -1,7 +1,7 @@
 package drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
-import config.IAndroidEmulator;
+import config.AndroidEmulator;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.remote.AutomationName;
@@ -19,7 +19,7 @@ import static org.apache.commons.io.FileUtils.copyInputStreamToFile;
 
 public class EmulatorMobileDriver implements WebDriverProvider {
 
-    static IAndroidEmulator config = ConfigFactory.create(IAndroidEmulator.class);
+    static AndroidEmulator config = ConfigFactory.create(AndroidEmulator.class);
 
     @Override
     public WebDriver createDriver(Capabilities capabilities) {

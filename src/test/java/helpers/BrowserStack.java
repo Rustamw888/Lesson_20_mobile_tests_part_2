@@ -1,7 +1,5 @@
 package helpers;
 
-import config.IAndroidEmulator;
-import config.IBrowserStack;
 import org.aeonbits.owner.ConfigFactory;
 
 import static io.restassured.RestAssured.given;
@@ -12,7 +10,7 @@ public class BrowserStack {
     public static String videoUrl(String sessionId) {
         String url = format("https://api.browserstack.com/app-automate/sessions/%s.json", sessionId);
 
-        IBrowserStack config = ConfigFactory.create(IBrowserStack.class);
+        config.BrowserStack config = ConfigFactory.create(config.BrowserStack.class);
 
         return given()
                 .auth().basic(config.username(), config.key())
