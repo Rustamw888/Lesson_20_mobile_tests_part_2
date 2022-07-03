@@ -15,7 +15,7 @@ import static io.qameta.allure.Allure.step;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Tag("android")
-public class SearchWikipediaTests extends TestBase {
+public class SearchTests extends TestBase {
 
     @Test
     void firstSearchPositiveTest() {
@@ -49,7 +49,7 @@ public class SearchWikipediaTests extends TestBase {
         });
 
         step("Assert textView", () -> {
-            String actualText = $$(AppiumBy.id("org.wikipedia.alpha:id/page_list_item_title")).first().text();
+            String actualText = $(AppiumBy.id("org.wikipedia.alpha:id/page_list_item_title")).text();
             assertEquals(actualText, "Star Wars");
         });
     }
@@ -63,8 +63,8 @@ public class SearchWikipediaTests extends TestBase {
         });
 
         step("Verify no results displayed", () ->
-        $(AppiumBy.id("org.wikipedia.alpha:id/results_text"))
-                .shouldHave(text("No results"))
+                $(AppiumBy.id("org.wikipedia.alpha:id/results_text"))
+                        .shouldHave(text("No results"))
         );
     }
 }

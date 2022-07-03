@@ -22,12 +22,16 @@ public class TestBase {
 
     @BeforeAll
     public static void setup() {
-        if (host.equals("myDevice")) {
-            Configuration.browser = RealDeviceMobileDriver.class.getName();
-        } else if (host.equals("androidEmulator")) {
-            Configuration.browser = EmulatorMobileDriver.class.getName();
-        } else {
-            Configuration.browser = BrowserstackMobileDriver.class.getName();
+        switch (host) {
+            case ("realDevice"):
+                Configuration.browser = RealDeviceMobileDriver.class.getName();
+                break;
+            case ("androidEmulator"):
+                Configuration.browser = EmulatorMobileDriver.class.getName();
+                break;
+            case ("browserStack"):
+                Configuration.browser = BrowserstackMobileDriver.class.getName();
+                break;
         }
         Configuration.browserSize = null;
     }
